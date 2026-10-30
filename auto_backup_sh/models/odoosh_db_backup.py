@@ -187,7 +187,7 @@ class DbBackup(models.Model):
                                       backup.sftp_host + "\nUsername: " + backup.sftp_user + \
                                       "\n\nError details: " + tools.ustr(e) + \
                                       "\n\nWith kind regards"
-                            catch_all_domain = self.env["ir.config_parameter"].sudo().get_param("mail.catchall.domain")
+                            catch_all_domain = self.env["ir.config_parameter"].sudo().get_str("mail.catchall.domain")
                             response_mail = "auto_backup@%s" % catch_all_domain if catch_all_domain else self.env.user.partner_id.email
                             msg = ir_mail_server.build_email(response_mail, [backup.email_to_notify],
                                                              "Backup from " + backup.host + "(" + backup.sftp_host +
