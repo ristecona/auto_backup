@@ -19,7 +19,7 @@
     'author': "Yenthe Van Ginneken",
     'website': "http://www.odoo.yenthevg.com",
     'category': 'Administration',
-    'version': '19.0.1.0.1',
+    'version': '20.0.1.0.0',
     'installable': True,
     'license': 'LGPL-3',
     'module_type': 'official',
@@ -30,7 +30,7 @@
     # always loaded
     'data': [
         'security/user_groups.xml',
-        'security/ir.model.access.csv',
+        'security/ir.access.csv',
         'views/backup_view.xml',
         'data/backup_data.xml',
     ],
